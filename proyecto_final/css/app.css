@@ -5,3 +5,11 @@
 /** Reescribir colores */
 
 /** Productos */
+
+h3 {
+  color: red;
+}
+
+nav ul {
+  display: flex;
+}
