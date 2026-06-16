@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>ACT 2 GRID</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        border: white 2px solid;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        height: 100vh;
+      }
+
+      header,
+      aside,
+      #titulo,
+      footer,
+      #seccion1,
+      #seccion2,
+      #articulos,
+      .articles {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 1/2;
+        background-color: green;
+      }
+
+      aside {
+        grid-column: 1/2;
+        grid-row: 2/5;
+        background-color: red;
+      }
+
+      #titulo {
+        grid-column: 2/4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: purple;
+      }
+
+      #seccion1 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background-color: salmon;
+      }
+
+      #seccion2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background-color: salmon;
+      }
+
+      section#articulos {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: blue;
+        color: white;
+        justify-items: stretch;
+      }
+
+      section .articles {
+        min-height: 200px;
+        flex-wrap: wrap;
+      }
+
+      footer {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+
+    <aside>ASIDE</aside>
+
+    <section id="titulo">TITULO</section>
+
+    <section id="seccion1">Sección 1</section>
+    <section id="seccion2">Sección 2</section>
+
+    <section id="articulos">
+      <articles class="articles">ARTICLE 1</articles>
+      <articles class="articles">ARTICLE 2</articles>
+      <articles class="articles">ARTICLE 3</articles>
+      <articles class="articles">ARTICLE 4</articles>
+      <articles class="articles">ARTICLE 5</articles>
+      <articles class="articles">ARTICLE 6</articles>
+      <articles class="articles">ARTICLE 7</articles>
+      <articles class="articles">ARTICLE 8</articles>
+      <articles class="articles">ARTICLE 9</articles>
+      <articles class="articles">ARTICLE 10</articles>
+    </section>
+
+    <footer>FOOTER</footer>
+  </body>
+</html>
