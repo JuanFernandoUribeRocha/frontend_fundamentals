@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>ACT 2 GRID</title>
+
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        border: white 2px solid;
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: inherit;
+      }
+
+      body {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "aside"
+          "titulo"
+          "seccion1"
+          "seccion2"
+          "articulos"
+          "footer";
+        min-height: 100hv;
+      }
+
+      header,
+      aside,
+      #titulo,
+      footer,
+      #seccion1,
+      #seccion2,
+      .articles {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+      }
+
+      header {
+        background-color: green;
+        grid-area: header;
+      }
+
+      aside {
+        background-color: red;
+        grid-area: aside;
+      }
+
+      #titulo {
+        background-color: purple;
+        grid-area: titulo;
+      }
+
+      #seccion1 {
+        background-color: salmon;
+        grid-area: seccion1;
+      }
+
+      #seccion2 {
+        background-color: salmon;
+        grid-area: seccion2;
+      }
+
+      #articulos {
+        background-color: blue;
+        grid-area: articulos;
+      }
+
+      footer {
+        background-color: gray;
+        grid-area: footer;
+      }
+
+      @media screen and (min-width: 1024px) {
+        body {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-areas:
+            "header header header"
+            "aside titulo titulo"
+            "aside seccion1 seccion2"
+            "aside articulos articulos"
+            "footer footer footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+
+    <aside>ASIDE</aside>
+
+    <section id="titulo">TITULO</section>
+
+    <section id="seccion1">Sección 1</section>
+    <section id="seccion2">Sección 2</section>
+
+    <section id="articulos">
+      <articles class="articles">ARTICLE 1</articles>
+      <articles class="articles">ARTICLE 2</articles>
+      <articles class="articles">ARTICLE 3</articles>
+      <articles class="articles">ARTICLE 4</articles>
+      <articles class="articles">ARTICLE 5</articles>
+      <articles class="articles">ARTICLE 6</articles>
+      <articles class="articles">ARTICLE 7</articles>
+      <articles class="articles">ARTICLE 8</articles>
+      <articles class="articles">ARTICLE 9</articles>
+      <articles class="articles">ARTICLE 10</articles>
+    </section>
+
+    <footer>FOOTER</footer>
+  </body>
+</html>

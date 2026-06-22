@@ -92,6 +92,73 @@
         grid-row-end: 6;
         background-color: gray;
       }
+
+      @media (max-width: 767px) {
+        body {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(8, 1fr);
+        }
+
+        header,
+        aside,
+        #titulo,
+        footer,
+        #seccion1,
+        #seccion2,
+        .articles {
+          min-height: 100px;
+        }
+
+        header {
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
+
+        #titulo {
+          grid-column: 1/2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+        }
+
+        aside {
+          grid-column: 1/2;
+          grid-row: 3/4;
+        }
+
+        #seccion1 {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 4;
+          grid-row-end: 5;
+        }
+
+        #seccion2 {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 5;
+          grid-row-end: 6;
+        }
+
+        section#articulos {
+          display: grid;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row: 6/7;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+        }
+
+        section .articles {
+          min-height: 100px;
+        }
+
+        footer {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 7;
+          grid-row-end: 8;
+        }
+      }
     </style>
   </head>
   <body>
