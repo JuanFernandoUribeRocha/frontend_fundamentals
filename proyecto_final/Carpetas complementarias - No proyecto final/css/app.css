@@ -6,10 +6,25 @@
 
 /** Productos */
 
+body {
+  margin: 0px;
+  padding: 3px;
+}
+
 h3 {
   color: red;
 }
 
 nav ul {
   display: flex;
+}
+
+.card {
+  display: grid;
+  color: white;
+  background-color: blue;
+}
+
+fw-bold {
+  font-weight: bold;
 }
